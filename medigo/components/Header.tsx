@@ -52,7 +52,7 @@ const Header = () => {
                         )}
 
                         {/* Pres Ana */}
-                        <Link href="/basket" className='relative flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
+                        <Link href="/prescription-actual" className='relative flex items-center justify-center bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded'>
                         <DocumentsIcon className='w-6 h-6'/>
                         <span className='hidden md:inline'>Upload Prescription</span>
                     </Link>
