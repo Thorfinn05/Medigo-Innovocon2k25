@@ -44,6 +44,7 @@ function ProductThumb({ product }: {product: Product }) {
                 <p className="mt-2 text-lg font-bold text-gray-900">
                     ₹{product.price?.toFixed(2)}
                 </p>
+                <button className="bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 text-white px-4 py-2 mt-2 rounded-lg shadow-lg font-bold transform hover:scale-105 transistion duration-300">Buy Now</button>
             </div>
         </Link>
             
