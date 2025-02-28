@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
+import Header from "@/components/Header";
+import { SanityLive } from "@/sanity/lib/live";
+import SearchPage from "../(store)/search/page";
+import {ClerkProvider} from '@clerk/nextjs'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -23,10 +27,17 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        {children}
-      </body>
-    </html>
+    <ClerkProvider dynamic>
+      <html lang="en">
+        <body>
+          <main>
+            <Header/>
+            {children}
+            <SearchPage searchParams={{query: "query"}}/>
+          </main>
+          <SanityLive />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
